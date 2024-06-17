@@ -1,0 +1,7 @@
+<tr *ngFor='let employee of employees;'>
+    <td>{{employee.code}}</td>
+    <td>{{employee.name | employeeTitle:employee.gender}}</td>
+    <td>{{employee.gender}}</td>
+    <td>{{employee.annualSalary}}</td>
+    <td>{{employee.dateOfBirth}}</td>
+</tr>

@@ -1,0 +1,31 @@
+dotnet tool install --global dotnet-ef
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+Install-Package Microsoft.EntityFrameworkCore.Tools
+
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.SQLite
+
+dotnet remove package Microsoft.EntityFrameworkCore.Tools
+
+dotnet ef migrations add InitialCreate --context QuizContext
+dotnet ef migrations add InitialCreate --context UserDbContext
+
+dotnet ef database update --context QuizContext
+dotnet ef database update --context UserDbContext
+
+dotnet tool update --global dotnet-ef
+
+dotnet ef dbcontext list
+
+dotnet ef dbcontext scaffold
+dotnet ef dbcontext scaffold "Server=(localdb)\mssqllocaldb;Database=Blogging;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models
+
+dotnet ef migrations remove
+
+dotnet ef dbcontext scaffold "Datasource=d:\asp.net_core\Projects\MS_Doc\TodoApi\GolibApi\Todos.db" -o Models Microsoft.EntityFrameworkCore.Sqlite -c "APIAppDbContext" -f -a
+
+dotnet ef dbcontext scaffold "DataSource=d:\asp.net_core\Projects\MS_Doc\TodoApi\GolibApi\SingleRegister.db" Microsoft.EntityFrameworkCore.Sqlite
+
+dotnet ef dbcontext scaffold "Server=127.0.0.1,5555;Database=SR_TEST;User Id=sa;Password=P@ssw0rd;" Microsoft.EntityFrameworkCore.SqlServer -o Models

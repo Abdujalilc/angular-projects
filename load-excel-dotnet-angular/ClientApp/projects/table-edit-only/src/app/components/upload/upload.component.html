@@ -1,0 +1,7 @@
+
+  <input type="file" (change)="onFileChange($event, input)" #input accept=".csv,.xlsx" multiple="false"
+    value="Upload file" />&nbsp;
+
+  <button class="btn btn-default" ngbTooltip="Upload file" type="button" (click)="readFile()" title="Read file" [disabled]="!fileName">
+    Read file
+  </button>&nbsp;

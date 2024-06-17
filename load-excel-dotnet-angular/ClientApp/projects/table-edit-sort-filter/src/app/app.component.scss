@@ -1,0 +1,98 @@
+p {
+    font-family: Lato;
+  }
+  .btn-edit {
+    text-align: right;
+  }
+  h2 {
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .table-header {
+    width: 90%;
+    margin: auto;
+    text-align: right;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .button-add-row {
+    background: #1b9e1b;
+    color: #ffffff;
+  }
+  
+  .button-remove-rows {
+    background: red;
+    color: #ffffff;
+    margin-right: 5px;
+  }
+  
+  .button-remove {
+    color: red;
+  }
+  
+  ::ng-deep .mat-form-field-infix {
+    width: 100% !important;
+  }
+  
+  .form-input {
+    padding-right: 5px;
+  }
+  th.mat-sort-header-sorted {
+  color: black;
+}
+.my-table {
+  width: 100%;
+}
+
+.mat-column-position {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.mat-column-name {
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+.mat-column-weight {
+  font-style: italic;
+}
+
+.mat-column-symbol {
+  width: 32px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*--------  Editable Cells  --------*/
+.selected {
+  border: 1px solid #698ad8;
+}
+
+.unselected {
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+/*---- Remove default browser behaviour after selecting cells ----*/
+.selected,
+.unselected {
+  -webkit-user-select: none;
+  /* Webkit  */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE 10   */
+  -o-user-select: none;
+  /* Currently not supported in Opera but will be soon */
+  user-select: none;
+}
+
+/*--------End Editable Cells--------*/
